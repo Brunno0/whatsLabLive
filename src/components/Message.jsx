@@ -1,10 +1,14 @@
-import React from 'react';
+import { MessageBox, MessageContainer } from './StyledMessage';
 
 
 function Message() {
    
     return (
-        <>Message</>
+        <MessageContainer> 
+            <MessageBox>
+                 Mensagem
+            </MessageBox>
+        </MessageContainer>
     );
 }
 

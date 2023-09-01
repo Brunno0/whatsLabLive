@@ -1,15 +1,15 @@
 
 import MessageForm from './MessageForm';
 import GlobalStyle from '../GlobalStyled';
-import { AppContainer,} from '../AppStyled';
+import { AppContainer,} from './StyledChat';
 
 function Chat() {
     
     return (
         <AppContainer>
             <GlobalStyle />
-            <MessageForm />
-        </AppContainer>
+            <MessageForm/>
+        </AppContainer >
     );
 }
 

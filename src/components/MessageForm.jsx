@@ -1,14 +1,10 @@
 import { MessageFormContainer } from "./StyledMessageForm";
 
-
-
 function MessageForm() {
 
-    return (
-        <MessageFormContainer>
-            <select
-                type="text"
-                  >
+       return (
+        <MessageFormContainer >
+            <select type="text">
                 <option>Eu</option>
                 <option>Turma</option>
             </select >
