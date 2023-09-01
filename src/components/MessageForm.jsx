@@ -1,20 +1,50 @@
-import { MessageFormContainer } from "./StyledMessageForm";
+import { useState } from "react";
+import { 
+    MessageFormContainer, 
+    SelectInput, 
+    SendButton, 
+    UserInput 
+} from "./StyledMessageForm";
 
-function MessageForm() {
+function MessageForm({ addMessage }) {
+    const [text, setText] = useState("");
+    const [user, setUser] = useState("Eu");
 
-       return (
-        <MessageFormContainer >
-            <select type="text">
+    const onSendMessage = (event) => {
+        event.preventDefault();
+
+        if (text.trim() === "") {
+            return;
+        }
+        
+        const message = {
+            user,
+            text
+        };
+        addMessage(message);
+        setText("");
+    };
+
+    return (
+        <MessageFormContainer onSubmit={onSendMessage}>
+            <SelectInput 
+                onChange={(e) => setUser(e.target.value)}
+                type="text"
+                value={user}
+            >
+
                 <option>Eu</option>
                 <option>Turma</option>
-            </select >
+            </SelectInput>
 
-            <input
+            <UserInput 
+                onChange={(e) => setText(e.target.value)}
                 placeholder="Mensagem"
                 type="text"
-                />
+                value={text}
+            />
 
-            <button type="submit">Enviar</button>
+            <SendButton type="submit">Enviar</SendButton>
         </MessageFormContainer>
     );
 }

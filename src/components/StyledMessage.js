@@ -17,5 +17,24 @@ export const MessageBox = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
-    `
+    text-align: ${(props) => props.position}; 
+    align-self: ${(props) => {
+        if (props.position === "right") {
+            return "flex-end";
+        } else {
+            return "flex-start";
+        }
+    }};
+    background-color: ${(props) => {
+        if (props.position === "right") {
+            return "#dcf8c6";
+        } else {
+            return "#ffffff";
+        }
+    }};
+`;
 
+export const UserMessage = styled.div`
+    margin-bottom: 10px;
+    font-weight: bold;
+`;
