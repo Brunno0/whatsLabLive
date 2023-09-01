@@ -11,7 +11,8 @@ Comece clonando o repositório fornecido. O ambiente de desenvolvimento já est�
 2. **Leitura das Instruções 📖:**
 Antes de mergulhar no código, leia atentamente as instruções fornecidas. Elas vão guiar nossos objetivos e as funcionalidades que precisamos implementar.
     
-    Link do projeto funcionando: https://t5vtlf.csb.app/
+    Link do projeto codeSandBox: https://t5vtlf.csb.app/
+    Deploy no surge: https://yielding-mother.surge.sh/ 
     
 3. **Implementação das Funcionalidades 💻**
     
