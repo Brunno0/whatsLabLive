@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MessageForm from './MessageForm';
 import Message from './Message';
 import GlobalStyle from '../GlobalStyled';
+
 import { AppContainer, MessagesContainer } from '../AppStyled';
 
 function Chat() {
@@ -22,6 +23,7 @@ function Chat() {
     ));
 
     return (
+
         <>
             <AppContainer>
                 <GlobalStyle />
@@ -29,6 +31,7 @@ function Chat() {
                 <MessageForm addMessage={addMessage} />
             </AppContainer>
         </>
+
     );
 }
 

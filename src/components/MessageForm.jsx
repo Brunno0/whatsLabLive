@@ -32,6 +32,7 @@ function MessageForm({ addMessage }) {
                 type="text"
                 value={user}
             >
+
                 <option>Eu</option>
                 <option>Turma</option>
             </SelectInput>
