@@ -7,15 +7,19 @@ export const MessageContainer = styled.div`
 `;
 
 export const MessageBox = styled.div`
-    border-radius: 10px;
-    background-color: white;
-    max-width: 40%;
-    white-space: normal;
-    padding: 10px 15px;
-    height: 100%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
-    `
-
+  border-radius: 10px;
+  background-color: white;
+  max-width: 40%;
+  white-space: normal;
+  padding: 10px 15px;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+  align-self: ${(props) =>
+    props.position === "right" ? "flex-end" : "flex-start"};
+  text-align: ${(props) => props.position};
+  background-color: ${(props) =>
+    props.position === "right" ? "#dcf8c6" : "white"};
+`;

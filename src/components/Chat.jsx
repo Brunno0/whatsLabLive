@@ -1,16 +1,32 @@
-
-import MessageForm from './MessageForm';
-import GlobalStyle from '../GlobalStyled';
-import { AppContainer,} from './StyledChat';
+import { useState } from "react";
+import MessageForm from "./MessageForm";
+import { AppContainer, MessagesContainer } from "./StyledChat";
+import Message from "./Message";
 
 function Chat() {
-    
-    return (
-        <AppContainer>
-            <GlobalStyle />
-            <MessageForm/>
-        </AppContainer >
-    );
+  const [messages, setMessages] = useState([]);
+
+  const addMessage = (msg) => {
+    const updateMessage = [...messages, msg];
+    setMessages(updateMessage);
+  };
+
+  const deleteMessage = (msg) => {
+    const updateMessage = messages.filter((message) => msg !== message);
+    setMessages(updateMessage);
+  };
+
+  const messageMap = messages.map((msg, index) => {
+    return <Message key={index} msg={msg} deleteMessage={deleteMessage} />;
+  });
+
+  return (
+    <AppContainer>
+      <MessagesContainer>{messageMap}</MessagesContainer>
+
+      <MessageForm addMessage={addMessage} />
+    </AppContainer>
+  );
 }
 
 export default Chat;
